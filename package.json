@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href /avalon/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -40,6 +40,7 @@
     "@angular/compiler-cli": "20.1.2",
     "@tailwindcss/postcss": "4.1.11",
     "@types/jasmine": "5.1.8",
+    "angular-cli-ghpages": "2.0.3",
     "jasmine-core": "5.9.0",
     "karma": "6.4.4",
     "karma-chrome-launcher": "3.2.0",
