@@ -1,0 +1,28 @@
+<div class="h-dvh bg-white">
+  <router-outlet/>
+
+  @if (activeIndex() > 0) {
+    <div class="fixed left-3 top-1/2 -translate-y-1/2 opacity-25 hover:opacity-100">
+      <button (click)="prev()" matMiniFab color="primary">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+    </div>
+  }
+
+  @if (activeIndex() > 0 && activeIndex() < 6) {
+    <div class="fixed right-3 top-1/2 -translate-y-1/2 opacity-25 hover:opacity-100">
+      <button (click)="next()" matMiniFab color="primary">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+    </div>
+  }
+
+  <img alt="" class="fixed bottom-0 left-0" src="start.png" width="55">
+  <img alt="" class="fixed bottom-0 left-0" src="sedan.png" width="55" [@moveRight]="'step' + activeIndex()">
+  <img alt="" class="fixed bottom-0 right-0" src="finish.png" width="55">
+  <div class="fixed bottom-14 right-3 text-xs">
+    @if (started()) {
+      {{ minutes() }}:{{ seconds() }}
+    }
+  </div>
+</div>

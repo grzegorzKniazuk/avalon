@@ -1,0 +1,12 @@
+<div class="flex flex-col gap-6 items-center justify-between h-dvh px-10 pt-10 pb-16">
+  <div></div>
+  <div class="relative">
+    <div class="text-center text-6xl text-slate-800 font-medium">What car should I buy?</div>
+    @if (ready()) {
+      <a routerLink="/1" @fade class="absolute -bottom-14 left-1/2 -translate-x-1/2">
+        <button matButton="filled">Start</button>
+      </a>
+    }
+  </div>
+  <div></div>
+</div>

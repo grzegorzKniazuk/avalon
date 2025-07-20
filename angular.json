@@ -10,24 +10,32 @@
           "skipTests": true
         },
         "@schematics/angular:component": {
+          "type": "component",
+          "changeDetection": "OnPush",
           "skipTests": true
         },
         "@schematics/angular:directive": {
+          "type": "directive",
           "skipTests": true
         },
         "@schematics/angular:guard": {
+          "typeSeparator": ".",
           "skipTests": true
         },
         "@schematics/angular:interceptor": {
+          "typeSeparator": ".",
           "skipTests": true
         },
         "@schematics/angular:pipe": {
+          "typeSeparator": ".",
           "skipTests": true
         },
         "@schematics/angular:resolver": {
+          "typeSeparator": ".",
           "skipTests": true
         },
         "@schematics/angular:service": {
+          "type": "service",
           "skipTests": true
         }
       },
@@ -50,6 +58,7 @@
               }
             ],
             "styles": [
+              "node_modules/@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ]
           },
